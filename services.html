@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - ChinarXpress</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+    <link rel="icon" type="image/png" href="fav/1.png">
+</head>
+<body>
+    
+    <!-- Header Section with Navigation -->
+    <header>
+        <!-- images slide bar  -->
+        <div class="logo">
+            <h1>ChinarXpress</h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Our Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        <div class="signup-btn">
+            <a href="#signup">Sign Up</a>
+        </div>
+    </header>
+    
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="image/services.jpg" alt="Our Services">
+        </div>
+    </div>
+    
+
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>🚖 Our Ride Booking Services</h2>
+        <div class="service-box">
+            <h3>🚕 Local City Rides</h3>
+            <p>Book rides anywhere in Kashmir, from Srinagar to Gulmarg, with ease.</p>
+        </div>
+        <div class="service-box">
+            <h3>✈️ Airport Transfers</h3>
+            <p>Reliable pick-up and drop-off from Srinagar Airport to any location.</p>
+        </div>
+        <div class="service-box">
+            <h3>🏔️ Tour Packages</h3>
+            <p>Explore Kashmir with guided tours to Gulmarg, Pahalgam, Sonmarg, and more.</p>
+        </div>
+        <div class="service-box">
+            <h3>🚙 Private & Shared Rides</h3>
+            <p>Choose between a budget-friendly shared ride or a private taxi.</p>
+        </div>
+    </section>
+
+    <!-- Fare Estimator -->
+    <section id="pricing">
+        <h2>💰 Fare Estimator</h2>
+        <p>Check estimated fares for your ride:</p>
+        <label for="destination">Select Destination:</label>
+        <select id="destination">
+            <option value="500">Srinagar City - ₹500</option>
+            <option value="1500">Gulmarg - ₹1500</option>
+            <option value="2000">Pahalgam - ₹2000</option>
+            <option value="2500">Sonmarg - ₹2500</option>
+        </select>
+        <button onclick="calculateFare()">Get Fare</button>
+        <p id="fare-result"></p>
+    </section>
+
+    <!-- Vehicle Options -->
+    <section id="vehicles">
+        <h2>🚘 Choose Your Vehicle</h2>
+        <div class="vehicle-box">
+            <h3>🚗 Sedan</h3>
+            <p>Comfortable for small families & business travelers.</p>
+        </div>
+        <div class="vehicle-box">
+            <h3>🚙 SUV</h3>
+            <p>Perfect for long-distance travel & mountain drives.</p>
+        </div>
+        <div class="vehicle-box">
+            <h3>🚌 Tempo Traveler</h3>
+            <p>Best for groups & family tours.</p>
+        </div>
+    </section>
+
+    <!-- Booking Process -->
+    <section id="booking">
+        <h2>📅 How to Book</h2>
+        <p>📞 Call or WhatsApp us at <strong>+91 98765 43210</strong></p>
+        <p>💳 Pay via UPI, cash, or online transfer</p>
+        <p>✅ Flexible cancellations & modifications</p>
+    </section>
+
+    <!-- Safety Measures -->
+    <section id="safety">
+        <h2>🛡️ Safety & Driver Verification</h2>
+        <p>✔️ Verified & trained drivers</p>
+        <p>✔️ 24/7 customer support</p>
+        <p>✔️ Emergency assistance available</p>
+    </section>
+
+    <!-- Offers & Discounts -->
+    <section id="offers">
+        <h2>🎉 Special Discounts</h2>
+        <p>💥 First-time user discount: <strong>10% OFF</strong></p>
+        <p>👨‍👩‍👦‍👦 Group booking offer: <strong>Flat ₹500 OFF</strong></p>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <h2>💬 Customer Reviews</h2>
+        <p>⭐⭐⭐⭐⭐ "Best ride service in Kashmir! Affordable & comfortable." - Aisha K.</p>
+        <p>⭐⭐⭐⭐ "On-time pick-up and great drivers. Highly recommend!" - Rajiv S.</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      

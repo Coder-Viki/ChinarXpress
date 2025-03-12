@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register as Service Provider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Register as a Service Provider</h1>
+    </header>
+
+    <section class="register-form">
+        <form id="register-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="govt-id">Government ID (Aadhar/PAN):</label>
+            <input type="text" id="govt-id" name="govt-id" required>
+
+            <label for="vehicle-type">Vehicle Type:</label>
+            <select id="vehicle-type" name="vehicle-type">
+                <option value="bike">Bike</option>
+                <option value="car">Car</option>
+                <option value="suv">SUV</option>
+                <option value="bus">Bus</option>
+            </select>
+
+            <label for="vehicle-number">Vehicle Number:</label>
+            <input type="text" id="vehicle-number" name="vehicle-number" required>
+
+            <label for="experience">Driving Experience (Years):</label>
+            <input type="number" id="experience" name="experience" required>
+
+            <label for="password">Create Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Register as Provider</button>
+        </form>
+    </section>
+
+    <section class="login-form">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ChinarXpress. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // ✅ Register User
+        document.getElementById("register-form").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const userData = {
+                name: document.getElementById("name").value,
+                phone: document.getElementById("phone").value,
+                email: document.getElementById("email").value,
+                govt_id: document.getElementById("govt-id").value,
+                vehicle_type: document.getElementById("vehicle-type").value,
+                vehicle_number: document.getElementById("vehicle-number").value,
+                experience: document.getElementById("experience").value,
+                password: document.getElementById("password").value,
+            };
+
+            try {
+                const response = await fetch("http://localhost:5000/register", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(userData),
+                });
+
+                const result = await response.json();
+                alert(result.message);
+
+                if (response.ok) {
+                    window.location.href = "login.html"; // Redirect to login page
+                }
+            } catch (error) {
+                console.error("Error registering user:", error);
+            }
+        });
+
+        // ✅ Login User
+        document.getElementById("login-form").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const loginData = {
+                email: document.getElementById("login-email").value,
+                password: document.getElementById("login-password").value,
+            };
+
+            try {
+                const response = await fetch("http://localhost:5000/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(loginData),
+                });
+
+                const result = await response.json();
+                alert(result.message);
+
+                if (response.ok) {
+                    localStorage.setItem("token", result.token);
+                    window.location.href = "dashboard.html"; // Redirect after login
+                }
+            } catch (error) {
+                console.error("Error logging in:", error);
+            }
+        });
+    </script>
+</body>
+</html>

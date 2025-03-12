@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChinarXpress</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+    <link rel="icon" type="image/png" href="fav/1.png">
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header>
+        <div class="logo">
+            <h1>ChinarXpress</h1>
+        </div>
+        
+        <!-- Navigation Links -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Sign Up Button -->
+        <div class="signup-btn">
+            <a href="sign.html">Sign Up</a>
+        </div>
+
+        <!-- Sign In Button -->
+        <div class="signin-btn">
+            <a href="login.html">Log-In</a>
+        </div>
+    </header>
+
+
+    <!-- Pic Slide Bar  -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="image/8.jpg" alt="Ride 1">
+        </div>
+        <div class="slide fade">
+            <img src="image/9.jpg" alt="Ride 2">
+        </div>
+        <div class="slide fade">
+            <img src="image/10.jpg" alt="Ride 3">
+        </div>
+        <div class="slide fade">
+            <img src="image/11.jpg" alt="Ride 3">
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Welcome to ChinarXpress</h1>
+            <p id="typing-text"></p> <!-- Typing animation below the header -->
+            <!-- <a href="#booking-form" class="cta-btn">Book a Ride</a> -->
+        </div>
+
+        <!-- Gallery Section with Grid of Images -->
+<section id="gallery" class="gallery">
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="image/6.jpg" alt="Image 1">
+            <span class="overlay-text">Kashmir Valley</span>
+        </div>
+        <div class="grid-item">
+            <img src="image/8.jpg" alt="Image 2">
+            <span class="overlay-text">Beautiful Lakes</span>
+        </div>
+        <div class="grid-item">
+            <img src="image/11.jpg" alt="Image 3">
+            <span class="overlay-text">Snowy Mountains</span>
+        </div>
+        <div class="grid-item">
+            <img src="image/10.jpg" alt="Image 4">
+            <span class="overlay-text">Peaceful Villages</span>
+        </div>
+    </div>
+</section>
+
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking-form" class="booking">
+        <h2>Book Your Ride</h2>
+        <form id="ride-form">
+
+            <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="section">Choose a Section:</label>
+        <select id="section">
+            <option value="VIP">VIP</option>
+            <option value="Regular">Regular</option>
+            <option value="Economy">Economy</option>
+        </select>
+
+        <label for="vehicle">Choose a Vehicle:</label>
+        <select id="vehicle" onchange="updateFare()">
+            <option value="bike">Bike</option>
+            <option value="car">Car</option>
+            <option value="bus">Bus</option>
+        </select>
+
+        <label for="distance">Enter Distance (km):</label>
+        <input type="number" id="distance" placeholder="Enter distance in km" oninput="updateFare()">
+
+        <p id="fare-display">Estimated Fare: ₹0</p>
+
+        <button onclick="bookRide()">Book Now</button>
+
+        <p id="confirmation"></p>
+    </div>
+        
+        </form>
+    </section>
+
+    <!-- Footer -->
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>Company</h2>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <h2>Follow Us</h2>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h2>Legal</h2>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
+    </footer>
+
+   <script src="app.js"></script>
+</body>
+</html>

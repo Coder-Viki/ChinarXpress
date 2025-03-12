@@ -1,0 +1,567 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+h1, h2 {
+    color: #004d00; /* Dark Green */
+}
+
+/* Navigation Bar Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #004d00; /* Dark Green */
+    color: white;
+    position: relative;
+}
+
+header .logo h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FFCC00; /* Yellow on hover */
+}
+
+/* Sign Up Button */
+.signup-btn {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+.signup-btn a {
+    padding: 10px 20px;
+    background-color: #FFCC00; /* Yellow */
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.signup-btn a:hover {
+    background-color: #FF9900; /* Slightly darker yellow on hover */
+}
+
+
+
+/* Sign In Button */
+.signin-btn {
+    position: absolute;
+    top: 20px;
+    left: 180px;
+}
+
+.signin-btn a {
+    padding: 10px 20px;
+    background-color: #1e7404; /* Yellow */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.signin-btn a:hover {
+    background-color: #FF9900; /* Slightly darker yellow on hover */
+}
+
+
+
+/* Slide show section */
+.slideshow-container {
+    margin-top: 2px;
+    position: relative;
+    max-width: 100%;
+    height: 600px; /* Adjust based on your needs */
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+/* Show first image */
+.slide:first-child {
+    opacity: 1;}
+    
+/* Hero Section Styles */
+.hero {
+    background-image: url('kashmir-landscape.jpg'); /* Replace with real image */
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#typing-text {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #FFCC00; /* Yellow text color for typing effect */
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    border-right: 3px solid #FFCC00; /* Simulate typing cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(30) 1s forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Overlay Text Styling */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1); /* Zoom-in effect on hover */
+}
+
+.grid-item:hover .overlay-text {
+    opacity: 1; /* Show text on hover */
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Booking Section */
+.booking {
+    background-color: #e0f7e0; /* Light Green */
+    padding: 40px;
+    text-align: center;
+}
+
+.booking h2 {
+    font-size: 2em;
+}
+
+
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#fare-display {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+#confirmation {
+    font-weight: bold;
+    color: #0066cc;
+    margin-top: 20px;
+}
+
+
+
+/* Footer Section */
+footer {
+    width: 100%;
+    background-color: #004d00; /* Dark Green */
+    color: white;
+    padding: 50px 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transform: rotateX(25deg);
+    z-index: -1;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    transform: rotateX(5deg);
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.footer-left h2, .footer-center h2, .footer-right h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-left ul, .footer-center ul, .footer-right ul {
+    list-style-type: none;
+}
+
+.footer-left li, .footer-center li, .footer-right li {
+    margin: 10px 0;
+}
+
+.footer-left a, .footer-center a, .footer-right a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-left a:hover, .footer-center a:hover, .footer-right a:hover {
+    color: #1e90ff;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    color: #bbb;
+}
+
+
+/* 
+contact us */
+
+
+contact-info {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+.hidden {
+    display: none;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}   
+
+
+
+
+/* sign up pages stlyes  */
+.signup-container, .register-form {
+    max-width: 500px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.signup-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.signup-btn1 {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Login Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h2 {
+    color: #007bff;
+}
+
+p {
+    color: #333;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Forgot Password & Register Link */
+.forgot-password, .register-link {
+    margin-top: 15px;
+}
+
+.forgot-password a, .register-link a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.forgot-password a:hover, .register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #007bff;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

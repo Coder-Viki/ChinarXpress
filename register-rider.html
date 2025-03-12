@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register to Book a Ride</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Register to Book a Ride</h1>
+    </header>
+
+    <section class="register-form">
+        <form action="submit_rider.php" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="govt-id">Government ID (Aadhar/PAN):</label>
+            <input type="text" id="govt-id" name="govt-id" required>
+
+            <label for="preferred-vehicle">Preferred Vehicle Type:</label>
+            <select id="preferred-vehicle" name="preferred-vehicle">
+                <option value="bike">Bike</option>
+                <option value="car">Car</option>
+                <option value="suv">SUV</option>
+                <option value="bus">Bus</option>
+            </select>
+
+            <label for="pickup-location">Preferred Pickup Location:</label>
+            <input type="text" id="pickup-location" name="pickup-location" required>
+
+            <label for="password">Create Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Register as Rider</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ChinarXpress. All rights reserved.</p>
+    </footer>
+</body>
+</html>
