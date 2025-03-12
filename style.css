@@ -1,4 +1,32 @@
+
 /* General Styles */
+
+
+/* For screens smaller than 768px (Tablets & Mobile) */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    .logo {
+        width: 80px;
+    }
+}
+
+/* For screens smaller than 480px (Mobile Phones) */
+@media (max-width: 480px) {
+    .nav-menu {
+        display: block;
+        text-align: center;
+    }
+    .content {
+        flex-direction: column;
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
